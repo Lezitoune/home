@@ -1,9 +1,11 @@
+
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Homes',
+      /*text: 'Accueil',
+      href: '/',
       links: [
         {
           text: 'SaaS',
@@ -21,10 +23,11 @@ export const headerData = {
           text: 'Personal',
           href: getPermalink('/homes/personal'),
         },
-      ],
+      ],*/
     },
     {
-      text: 'Pages',
+      /*text: 'Photographe',
+      href: 'https://photo.oliviernuber.com/',
       links: [
         {
           text: 'Features (Anchor Link)',
@@ -32,7 +35,7 @@ export const headerData = {
         },
         {
           text: 'Services',
-          href: getPermalink('/services'),
+          href: 'https://photo.oliviernuber.com/',
         },
         {
           text: 'Pricing',
@@ -54,9 +57,9 @@ export const headerData = {
           text: 'Privacy policy',
           href: getPermalink('/privacy'),
         },
-      ],
+      ],*/
     },
-    {
+    /*{
       text: 'Landing',
       links: [
         {
@@ -84,13 +87,14 @@ export const headerData = {
           href: getPermalink('/landing/subscription'),
         },
       ],
-    },
-    {
+    },*/
+    /*{
       text: 'Blog',
       links: [
         {
-          text: 'Blog List',
+          text: 'Liste',
           href: getBlogPermalink(),
+          href: '#',
         },
         {
           text: 'Article',
@@ -109,17 +113,16 @@ export const headerData = {
           href: getPermalink('astro', 'tag'),
         },
       ],
-    },
-    {
+    },*/
+    /*{
       text: 'Widgets',
       href: '#',
-    },
+    },*/
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
 };
 
 export const footerData = {
-  links: [
+  /*links: [
     {
       title: 'Product',
       links: [
@@ -164,20 +167,22 @@ export const footerData = {
         { text: 'Shop', href: '#' },
       ],
     },
-  ],
-  secondaryLinks: [
+  ],*/
+  /*secondaryLinks: [
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
-  ],
-  socialLinks: [
+  ],*/
+  /*socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
     { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
     { ariaLabel: 'RSS', icon: 'tabler:rss', href: getAsset('/rss.xml') },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/onwidget/astrowind' },
-  ],
+  ],*/
   footNote: `
-    <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
-    Made by <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/"> onWidget</a> · All rights reserved.
-  `,
+  <span class="lazy w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 float-left rtl:float-right rounded-sm bg-[url(https://onwidget.com/favicon/favicon-32x32.png)]"></span>
+  Créé par <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://onwidget.com/" target="_blank"> onWidget</a> - 
+  <a class="text-blue-600 hover:underline dark:text-gray-200" href="https://photo.oliviernuber.com/" target="_self"> <span class="w-5 h-5 md:w-6 md:h-6 md:-mt-0.5 bg-cover mr-1.5 rtl:mr-0 rtl:ml-1.5 rtl:float-right rounded-sm bg-[url(https://www.oliviernuber.com/img/Logo-Noir-Fond-Blanc-32x32.png)]"style="position: absolute;"></span></a>
+  <span style="margin-left: 1.75rem;">Modifié avec </span><span class="text-red-600">♥</span> par <span class="text-emerald-600 dark:text-yellow-300">Olivier Nuber</span> - Tous droits réservés.
+`,
 };
