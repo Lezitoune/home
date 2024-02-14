@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import nofilm from '~/assets/images/nofilm.png';
+//import nofilm from '~/assets/images/nofilm.png';
 
 import { getHomePermalink } from '~/utils/permalinks';
 
@@ -21,7 +21,9 @@ const metadata = {
         </h2>
         <p class="text-3xl font-semibold md:text-3xl">Quelqu'un a oublié de charger l'appareil photo.</p>
 
-        <Image src={nofilm} alt="Appareil photo ouvert sans film"/>
+        <!-- <Image src={nofilm} alt="Appareil photo ouvert sans film"/> -->
+        <Image src="/img/nofilm.png" alt="Logo" width="1300" height="700"></Image>
+
         
         <p class="mt-4 mb-8 text-lg font-semibold">Je file chercher une pellicule.<br>D'ici là vous trouverez bien d'autres choses<br>sur notre page d'accueil.</p>
         <a rel="noopener noreferrer" href={getHomePermalink()} class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full ml-4">Retrouvez-moi à l'accueil</a>

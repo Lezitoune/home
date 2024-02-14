@@ -1,13 +1,14 @@
 ---
 // import { SITE } from '~/utils/config';
 import { Image } from 'astro:assets';
-import LogoNoir from '~/assets/images/LogoSiteNoir.png';
-import LogoBlanc from '~/assets/images/LogoSiteBlanc.png';
+//import LogoNoir from '~/assets/images/LogoSiteNoir.png';
+//import LogoBlanc from '~/assets/images/LogoSiteBlanc.png';
 ---
 
 <span class="lazy self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white block dark:hidden">
-  <Image src={LogoNoir} alt="LogoNoir"/>
+  <Image src="/img/LogoSiteNoir.png" alt="Logo" width="200" height="60"></Image>
 </span>
 <span class="lazy self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white hidden dark:block">
-  <Image src={LogoBlanc} alt="logoBlanc"/>
+  <Image src="/img/LogoSiteBlanc.png" alt="Logo" width="200" height="60"></Image>
 </span>
+
