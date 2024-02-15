@@ -88,6 +88,6 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: Upload img folder
         uses: actions/upload-artifact@v4
-          with:
-            name: img-folder
-            path: img/
+        with:
+          name: img-folder
+          path: img/
