@@ -1,7 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { SITE } from '~/utils/config';
-import { getHomePermalink } from '~/utils/permalinks';
+//import { Icon } from 'astro-icon/components';
+//import { SITE } from '~/utils/config';
+//import { getHomePermalink } from '~/utils/permalinks';
 
 interface Link {
   text?: string;
@@ -23,16 +23,52 @@ export interface Props {
   theme?: string;
 }
 
-const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+const { footNote = '', theme = 'light' } = Astro.props;
 ---
-
-<footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
-  <div class="dark:bg-dark absolute inset-0 pointer-events-none" aria-hidden="true"></div>
+<!-- <div class="clearfix"></div> -->
+<div id="footer_art" class="grid grid-flow-col auto-cols-max content-center">&nbsp;</div>
+<div id="footer_grass"> &nbsp; </div>
+<footer class:list={[{ dark: theme === 'dark' }, 'relative not-prose fond-pied']}>
+  <div class="fond-pied dark:font-pied absolute inset-0 pointer-events-none" aria-hidden="true"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 dark:text-slate-300">
     <div class="md:flex md:items-center md:justify-between py-6 md:py-8">
-      <div class="text-sm mr-4 dark:text-slate-400">
+      <div class="text-sm mr-4 text-gray-300">
         <Fragment set:html={footNote} />
       </div>
     </div>
   </div>
 </footer>
+
+<style>
+#footer_grass {
+    background: url('grass.png') top center repeat-x;
+    /* height: 39px; */
+    margin-top: -39px;
+	background-position: center;
+}
+#footer_art {
+	background-image: url('footer-art.png');
+	background-repeat: no-repeat;
+	height: 180px;
+	background-position: center;
+  margin-bottom: 0px;
+}
+
+.fond-pied {
+	background-color: #898989;
+}
+
+.clearfix {
+  display: block;
+}
+.clearfix::after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+</style>

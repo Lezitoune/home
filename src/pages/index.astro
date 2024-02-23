@@ -9,6 +9,8 @@ import { Image } from 'astro:assets';
 //import fondnoir from '~/assets/images/LogoONbrNoir.svg';
 //import fondblanc from '~/assets/images/LogoONbrBlanc.svg';
 
+import logogris from '~/assets/images/LogoONbrGris.svg';
+
 const metadata = {
   title: 'Olivier Nuber — Bienvenue !',
 };
@@ -16,21 +18,26 @@ const metadata = {
 
 <Layout metadata={metadata}>
 
-  <div class="flex justify-center animate-pulse">
+  <br><div class="flex justify-center">
     <span class="lazy dark:hidden">
       <!-- <Image class="animate-pulse" src={fondnoir} alt="LogoNoir"/> -->
       <!--image={{ src: '~/assets/images/LogoONbrNoir.svg', alt: 'Logo noir' }}-->
-      <Image src="/img/LogoONbrNoir.svg" alt="Logo" width="512" height="512"></Image>
+
+      <Image src={logogris} alt="LogoGris"/>
+      <!-- <Image src="/img/LogoONbrNoir.svg" alt="Logo" width="512" height="512"></Image> -->
     </span>
     <span class="hidden lazy dark:block">
       <!-- <Image class="animate-pulse" src={fondblanc} alt="logoBlanc"/> -->
       <!--image={{ src: '~/assets/images/LogoONbrBlanc.svg', alt: 'Logo blanc' }}-->
-      <Image src="/img/LogoONbrBlanc.svg" alt="Logo" width="512" height="512"></Image>
-    </span>
-</div>
 
-<div class="text-center md:mx-auto max-w-3xl mb-8 md:mb-12">
-	<h2 class="font-bold font-heading leading-tighter tracking-tighter text-3xl text-heading md:text-4xl text-emerald-600 dark:text-yellow-300 highlight">Bienvenue !</h2>
-</div>
+      <Image src={logogris} alt="LogoGris"/>
+      <!-- <Image src="/img/LogoONbrBlanc.svg" alt="Logo" width="512" height="512"></Image> -->
+    </span>
+  </div>
+
+  <div class="text-center md:mx-auto max-w-3xl mb-8 md:mb-12">
+    <!-- <h2 class="font-bold font-heading leading-tighter tracking-tighter text-3xl text-heading md:text-4xl text-emerald-600 dark:text-yellow-300 highlight">Bienvenue !</h2><br> -->
+    <h2 class="font-bold font-heading leading-tighter tracking-tighter text-3xl text-heading md:text-4xl text-gris dark:text-gris highlight">Bienvenue !</h2><br>
+  </div>
 
 </Layout>
